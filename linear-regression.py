@@ -4,17 +4,17 @@ import sklearn
 from sklearn import linear_model
 from sklearn.utils import shuffle
 #Create dataframe  from student-mat.csv file
-data = pd.read_csv("student-mat.csv", sep=";")
+#data = pd.read_csv("student-mat.csv", sep=";")
 
 
 
-data = pd.read_csv("student-mat.csv", sep=";")
+data = pd.read_csv("income.data.csv", sep=",")
 
 #Extract required attrbutes
-data = data[["G1", "G2", "G3", "studytime", "failures", "absences"]]
+data = data[["income","happiness"]]
 #print(data)
 #Declare data to predict
-predict = "G3"
+predict = "happiness"
 
 # X is an 2d array where each  1d array consists  .
 X = np.array(data.drop([predict], 1))
